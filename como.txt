@@ -1,0 +1,67 @@
+Comandos del megatutorial de flask
+
+$ python3.7 -m venv venv
+
+$ source venv/bin/activate
+
+(venv) $ pip3.7 install flask
+
+(venv) $ import flask
+
+(venv) $ mkdir app
+
+creamos el archivo 
+(venv) $ app/__init__.py
+
+creamos el archivo 
+(venv) $ app/routes.py
+
+configuramos la variable de entorno 
+(venv) $ export FLASK_APP=microblog.py
+
+nos vamos al directorio raiz y ejecutamos 
+(venv) $ flask run
+
+instalamos dotenv
+(venv) $ pip install python-dotenv
+
+creamos la carpeta
+(venv) $ mkdir app/templates
+
+instalamos flask-WTF
+(venv) $ pip install flask-wtf
+
+para activar modo debug
+
+(venv) $ export FLASK_DEBUG=1
+
+Instalar sqlachemy
+
+(venv) $ pip install flask-sqlalchemy
+
+Y el alembic para las migraciones
+
+(venv) $ pip install flask-migrate
+
+Generar la base de datos
+
+(venv) $ flask db migrate -m "posts table"
+
+Crear el repositorio de migracion
+
+(venv) $ flask db init
+
+Generar la migracion
+
+(venv) $ flask db migrate -m "users table"
+
+Para aplicar cambios a la base de datos
+(venv) $ flask db upgrade
+
+Actualizar la bd luego de cambiar el modelo
+
+(venv) $ flask db migrate -m "posts table"
+
+Aplicar la migracion a la base de datos
+
+(venv) $ flask db upgrade
